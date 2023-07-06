@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Number Game</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+      integrity="sha256-ECB9bbROLGm8wOoEbHcHRxlHgzGqYpDtNTgDTyDz0wg="
+      crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Number Guessing Game</h1>
+      <hr />
+
+      <label for="user-number-field">Enter Your Answer</label>
+      <input
+        type="number"
+        id="user-number-field"
+        placeholder="Enter a number..." />
+
+      <button
+        id="check-button"
+        onclick="checkButtonClicked('user-number-field.value')">
+        Check
+      </button>
+      <hr />
+
+      <label for="message">Judgement</label>
+      <textarea
+        id="message"
+        style="resize: none"
+        placeholder="Result will be given here..."
+        readonly
+        cols="30"
+        rows="10"></textarea>
+      <label for="chance">Remaining Chances</label>
+      <textarea
+        id="chance"
+        style="resize: none"
+        placeholder="You will get 3 chances to guess the number"
+        readonly
+        cols="30"
+        rows="10"></textarea>
+
+      <hr />
+
+      <button id="start-button">Start</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
